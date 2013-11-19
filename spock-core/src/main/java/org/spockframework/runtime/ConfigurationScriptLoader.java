@@ -128,7 +128,7 @@ public class ConfigurationScriptLoader {
   private GroovyShell createShell() {
     CompilerConfiguration compilerSettings = new CompilerConfiguration();
     compilerSettings.setScriptBaseClass(DelegatingScript.class.getName());
-    return new GroovyShell(getClass().getClassLoader(), new Binding(), compilerSettings);
+    return new GroovyShell(Thread.currentThread().getContextClassLoader(), new Binding(), compilerSettings);
   }
 }
 
