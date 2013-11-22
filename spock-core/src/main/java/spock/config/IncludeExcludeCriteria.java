@@ -23,7 +23,11 @@ import java.util.regex.Pattern;
  * Configuration indicating which specs and methods should be
  * included/excluded from a spec run. Specs can be included/excluded
  * based on their annotations and their (base) classes. Methods
- * can be included/excluded based on their annotations.
+ * can be included/excluded based on their annotations and names.
+ * Criteria can be annotations, spec classes, base classes,
+ * and regex pattern strings.  Patterns are matched against the
+ * simple names of annotations, spec (but not base) classes,
+ * and methods.
  *
  * @author Peter Niederwieser
  */
